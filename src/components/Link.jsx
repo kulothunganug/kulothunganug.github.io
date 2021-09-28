@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Link = ({ href, children, className }) => (
-  <A target='_blank' href={href} className={className}>
+  <A target='_blank' rel='noopener' href={href} className={className}>
     {children}
   </A>
 );
