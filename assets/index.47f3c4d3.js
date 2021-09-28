@@ -1,4 +1,4 @@
-import{j as e,s as o,U as r,D as t,G as n,I as i,a,Y as s,R as d,b as l}from"./vendor.2e73c668.js";!function(){const e=document.createElement("link").relList;if(!(e&&e.supports&&e.supports("modulepreload"))){for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver((e=>{for(const r of e)if("childList"===r.type)for(const e of r.addedNodes)"LINK"===e.tagName&&"modulepreload"===e.rel&&o(e)})).observe(document,{childList:!0,subtree:!0})}function o(e){if(e.ep)return;e.ep=!0;const o=function(e){const o={};return e.integrity&&(o.integrity=e.integrity),e.referrerpolicy&&(o.referrerPolicy=e.referrerpolicy),"use-credentials"===e.crossorigin?o.credentials="include":"anonymous"===e.crossorigin?o.credentials="omit":o.credentials="same-origin",o}(e);fetch(e.href,o)}}();const c=e.exports.jsx,h=e.exports.jsxs,p=()=>h(m,{children:[h(g,{children:["Hey there! ",c(x,{children:"👋"}),","]}),c(f,{children:"I'm Kulothungan."})]}),m=o.div``,f=o.h1`
+import{j as e,s as o,U as r,D as n,G as t,I as i,a,Y as s,R as d,b as l}from"./vendor.2e73c668.js";!function(){const e=document.createElement("link").relList;if(!(e&&e.supports&&e.supports("modulepreload"))){for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver((e=>{for(const r of e)if("childList"===r.type)for(const e of r.addedNodes)"LINK"===e.tagName&&"modulepreload"===e.rel&&o(e)})).observe(document,{childList:!0,subtree:!0})}function o(e){if(e.ep)return;e.ep=!0;const o=function(e){const o={};return e.integrity&&(o.integrity=e.integrity),e.referrerpolicy&&(o.referrerPolicy=e.referrerpolicy),"use-credentials"===e.crossorigin?o.credentials="include":"anonymous"===e.crossorigin?o.credentials="omit":o.credentials="same-origin",o}(e);fetch(e.href,o)}}();const c=e.exports.jsx,h=e.exports.jsxs,p=()=>h(m,{children:[h(g,{children:["Hey there! ",c(x,{children:"👋"}),","]}),c(f,{children:"I'm Kulothungan."})]}),m=o.div``,f=o.h1`
   font-size: 90px;
   font-family: 'Arvo', serif;
   font-weight: bold;
@@ -33,7 +33,7 @@ import{j as e,s as o,U as r,D as t,G as n,I as i,a,Y as s,R as d,b as l}from"./v
   animation-iteration-count: infinite; /* Never stop waving :) */
   transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
   display: inline-block;
-`,v=({href:e,children:o,className:r})=>c(y,{target:"_blank",href:e,className:r,children:o}),y=o.a`
+`,v=({href:e,children:o,className:r})=>c(y,{target:"_blank",rel:"noopener",href:e,className:r,children:o}),y=o.a`
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -50,12 +50,12 @@ import{j as e,s as o,U as r,D as t,G as n,I as i,a,Y as s,R as d,b as l}from"./v
     background-color: ${e=>e.hoverColor};
     transform: scale(1.1);
   }
-`,b=()=>h(z,{children:[c(C,{children:"Find me on:"}),h(I,{children:[c(k,{href:"https://discordapp.com/users/770868890737704979",hoverColor:"#5865F2",IconComponent:c(t,{size:25})}),c(k,{href:"https://github.com/Kulothungan16",hoverColor:"#181717",IconComponent:c(n,{size:25})}),c(k,{href:"https://www.instagram.com/kuloth.__.ungan",hoverColor:"#E4405F",IconComponent:c(i,{size:25})}),c(k,{href:"mailto:kulothunganug@gmail.com",hoverColor:"#EA4335",IconComponent:c(a,{size:25})}),c(k,{href:"https://www.youtube.com/channel/UCPFVA4ruEe3QOtTfxEGpqrg",hoverColor:"#FF0000",IconComponent:c(s,{size:25})})]})]}),C=o.p`
+`,b=()=>h(z,{children:[c(C,{children:"Find me on:"}),h(I,{children:[c(k,{href:"https://discordapp.com/users/770868890737704979",hoverColor:"#5865F2",IconComponent:c(n,{size:25})}),c(k,{href:"https://github.com/Kulothungan16",hoverColor:"#181717",IconComponent:c(t,{size:25})}),c(k,{href:"https://www.instagram.com/kuloth.__.ungan",hoverColor:"#E4405F",IconComponent:c(i,{size:25})}),c(k,{href:"mailto:kulothunganug@gmail.com",hoverColor:"#EA4335",IconComponent:c(a,{size:25})}),c(k,{href:"https://www.youtube.com/channel/UCPFVA4ruEe3QOtTfxEGpqrg",hoverColor:"#FF0000",IconComponent:c(s,{size:25})})]})]}),C=o.p`
   margin-bottom: 10px;
 `,z=o.div`
   position: fixed;
   bottom: 30px;
-`,k=o((({href:e,hoverColor:o,className:r,IconComponent:t})=>c(w,{href:e,hoverColor:o,className:r,children:t})))`
+`,k=o((({href:e,hoverColor:o,className:r,IconComponent:n})=>c(w,{href:e,hoverColor:o,className:r,children:n})))`
   margin-right: 7px;
 `,I=o.div`
   display: flex;
