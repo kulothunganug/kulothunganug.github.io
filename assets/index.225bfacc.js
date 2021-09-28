@@ -68,7 +68,7 @@ import{j as e,s as o,U as r,D as n,G as t,I as i,a,Y as s,R as d,b as l}from"./v
   }
 `,F=o(v)`
   font-size: 15px;
-  background-color: tomato;
+  background-color: crimson;
   border-radius: 5px;
   padding: 5px;
   margin-right: 10px;
