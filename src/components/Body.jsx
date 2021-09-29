@@ -34,7 +34,7 @@ const P = styled.p`
 
 const Tag = styled(Link)`
   font-size: 15px;
-  background-color: tomato;
+  background-color: crimson;
   border-radius: 5px;
   padding: 5px;
   margin-right: 10px;
