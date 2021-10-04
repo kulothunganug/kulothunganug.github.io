@@ -16,27 +16,27 @@ const Footer = () => (
   <Container>
     <Caption>Find me on:</Caption>
     <Links>
-      <IconLink
+      <SocialLink
         href='https://discordapp.com/users/770868890737704979'
         hoverColor='#5865F2'
         IconComponent={<Discord size={ICON_SIZE} />}
       />
-      <IconLink
+      <SocialLink
         href='https://github.com/Kulothungan16'
         hoverColor='#181717'
         IconComponent={<Github size={ICON_SIZE} />}
       />
-      <IconLink
+      <SocialLink
         href='https://www.instagram.com/kuloth.__.ungan'
         hoverColor='#E4405F'
         IconComponent={<Instagram size={ICON_SIZE} />}
       />
-      <IconLink
+      <SocialLink
         href='mailto:kulothunganug@gmail.com'
         hoverColor='#EA4335'
         IconComponent={<Gmail size={ICON_SIZE} />}
       />
-      <IconLink
+      <SocialLink
         href='https://www.youtube.com/channel/UCPFVA4ruEe3QOtTfxEGpqrg'
         hoverColor='#FF0000'
         IconComponent={<Youtube size={ICON_SIZE} />}
@@ -54,7 +54,7 @@ const Container = styled.div`
   bottom: 30px;
 `;
 
-const IconLink = styled(IconLink)`
+const SocialLink = styled(IconLink)`
   margin-right: 7px;
 `;
 
