@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 import Link from './Link';
 
-const IconLink = ({ href, hoverColor, className, IconComponent }) => (
-  <Container href={href} hoverColor={hoverColor} className={className}>
+const IconLink = ({ IconComponent, ...rest }) => (
+  <Container {...rest}>
     {IconComponent}
   </Container>
 );
