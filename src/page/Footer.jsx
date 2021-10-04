@@ -8,7 +8,7 @@ import {
   Gmail,
 } from '@styled-icons/simple-icons';
 
-import IconLink from './IconLink';
+import IconLink from '../components/IconLink';
 
 const ICON_SIZE = 25;
 

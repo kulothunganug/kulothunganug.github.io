@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Header, Body, Footer } from './components';
+import { Header, Body, Footer } from './page';
 
 const App = () => (
   <Container>
