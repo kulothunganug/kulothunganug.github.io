@@ -8,7 +8,7 @@ import {
   Gmail,
 } from '@styled-icons/simple-icons';
 
-import IconButton from './IconButton';
+import IconLink from './IconLink';
 
 const ICON_SIZE = 25;
 
@@ -54,7 +54,7 @@ const Container = styled.div`
   bottom: 30px;
 `;
 
-const IconLink = styled(IconButton)`
+const IconLink = styled(IconLink)`
   margin-right: 7px;
 `;
 

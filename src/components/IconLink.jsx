@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Link from './Link';
 
-const IconButton = ({ href, hoverColor, className, IconComponent }) => (
+const IconLink = ({ href, hoverColor, className, IconComponent }) => (
   <Container href={href} hoverColor={hoverColor} className={className}>
     {IconComponent}
   </Container>
@@ -24,4 +24,4 @@ const Container = styled(Link)`
   }
 `;
 
-export default IconButton;
+export default IconLink;
