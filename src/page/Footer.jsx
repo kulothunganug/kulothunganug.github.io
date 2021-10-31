@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SiInstagram, SiDiscord, SiYoutube, SiGithub, SiGmail } from "react-icons/si";
+import {
+  SiInstagram,
+  SiDiscord,
+  SiYoutube,
+  SiGithub,
+  SiGmail,
+} from 'react-icons/si';
 
 import IconLink from '../components/IconLink';
 

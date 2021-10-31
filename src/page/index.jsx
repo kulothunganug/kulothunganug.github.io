@@ -14,17 +14,17 @@ const Home = () => {
     <div>
       <Container>
         <IconContainer>
-        {theme == 'light' ? (
-          <BsMoon
-            size={28}
-            onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-          />
-        ) : (
-          <BsSun
-            size={25}
-            onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-          />
-        )}
+          {theme == 'light' ? (
+            <BsMoon
+              size={28}
+              onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
+            />
+          ) : (
+            <BsSun
+              size={25}
+              onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
+            />
+          )}
         </IconContainer>
         <Header />
         <Body />

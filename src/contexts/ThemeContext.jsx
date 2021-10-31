@@ -2,7 +2,7 @@ import React, { useState, useContext, createContext } from 'react';
 import { ThemeProvider as SCThemeProvider } from 'styled-components';
 
 import { lightTheme, darkTheme } from '../config/theme';
-import {useStorage} from '../hooks';
+import { useStorage } from '../hooks';
 
 const ThemeContext = createContext();
 

@@ -10,8 +10,7 @@ const Header = () => (
   </Container>
 );
 
-const Container = styled.div`
-`;
+const Container = styled.div``;
 
 const H1 = styled.h1`
   font-size: 90px;

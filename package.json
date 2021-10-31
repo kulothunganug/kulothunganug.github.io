@@ -7,7 +7,7 @@
     "serve": "vite preview",
     "predeploy": "vite build",
     "deploy": "gh-pages -d dist",
-    "pretty": "prettier --write src/**/*.js src/**/*.jsx"
+    "pretty": "prettier --write src"
   },
   "dependencies": {
     "react": "^17.0.0",
