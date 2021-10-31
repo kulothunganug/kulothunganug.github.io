@@ -15,9 +15,11 @@ const Container = styled(Link)`
   height: 40px;
   border-radius: 50%;
   transition: all 0.25s ease-in;
+  color: ${p => p.theme.textColor};
 
   &:hover {
     background-color: ${p => p.hoverColor};
+    color: white;
     transform: scale(1.1);
   }
 `;

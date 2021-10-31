@@ -1,12 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  Instagram,
-  Discord,
-  Youtube,
-  Github,
-  Gmail,
-} from '@styled-icons/simple-icons';
+import { SiInstagram, SiDiscord, SiYoutube, SiGithub, SiGmail } from "react-icons/si";
 
 import IconLink from '../components/IconLink';
 
@@ -19,27 +13,27 @@ const Footer = () => (
       <SocialLink
         href='https://discordapp.com/users/770868890737704979'
         hoverColor='#5865F2'
-        IconComponent={<Discord size={ICON_SIZE} />}
+        IconComponent={<SiDiscord size={ICON_SIZE} />}
       />
       <SocialLink
         href='https://github.com/Kulothungan16'
         hoverColor='#181717'
-        IconComponent={<Github size={ICON_SIZE} />}
+        IconComponent={<SiGithub size={ICON_SIZE} />}
       />
       <SocialLink
         href='https://www.instagram.com/kuloth.__.ungan'
         hoverColor='#E4405F'
-        IconComponent={<Instagram size={ICON_SIZE} />}
+        IconComponent={<SiInstagram size={ICON_SIZE} />}
       />
       <SocialLink
         href='mailto:kulothunganug@gmail.com'
         hoverColor='#EA4335'
-        IconComponent={<Gmail size={ICON_SIZE} />}
+        IconComponent={<SiGmail size={ICON_SIZE} />}
       />
       <SocialLink
         href='https://www.youtube.com/channel/UCPFVA4ruEe3QOtTfxEGpqrg'
         hoverColor='#FF0000'
-        IconComponent={<Youtube size={ICON_SIZE} />}
+        IconComponent={<SiYoutube size={ICON_SIZE} />}
       />
     </Links>
   </Container>

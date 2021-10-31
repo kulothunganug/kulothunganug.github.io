@@ -9,7 +9,6 @@ const Body = () => (
     <Tags>
       <Tag href='https://www.python.org/'>Python</Tag>
       <Tag href='https://kivy.org/'>Kivy</Tag>
-      <Tag href='https://www.djangoproject.com/'>django</Tag>
       <Tag href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>
         JavaScript
       </Tag>
@@ -26,6 +25,7 @@ const Container = styled.div``;
 
 const P = styled.p`
   font-size: 20px;
+  margin: auto;
 
   @media only screen and (max-width: 600px) {
     font-size: 17px;

@@ -10,14 +10,16 @@ const Header = () => (
   </Container>
 );
 
-const Container = styled.div``;
+const Container = styled.div`
+`;
 
 const H1 = styled.h1`
   font-size: 90px;
   font-family: 'Arvo', serif;
   font-weight: bold;
-  display: inline-block;
   transition: color 0.25s ease-in;
+  display: inline-block;
+  margin: auto;
 
   &:hover {
     color: dodgerblue;
@@ -30,6 +32,7 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
   font-size: 40px;
+  margin: auto;
 
   @media only screen and (max-width: 600px) {
     font-size: 30px;
@@ -48,10 +51,10 @@ const wave = keyframes`
 `;
 
 const Span = styled.span`
-  animation-name: ${wave}; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: ${wave};
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
   display: inline-block;
 `;
 
