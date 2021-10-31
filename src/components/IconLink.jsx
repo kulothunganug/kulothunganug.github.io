@@ -4,9 +4,7 @@ import styled from 'styled-components';
 import Link from './Link';
 
 const IconLink = ({ IconComponent, ...rest }) => (
-  <Container {...rest}>
-    {IconComponent}
-  </Container>
+  <Container {...rest}>{IconComponent}</Container>
 );
 
 const Container = styled(Link)`

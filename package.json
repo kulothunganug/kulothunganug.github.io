@@ -6,7 +6,8 @@
     "dev": "vite",
     "serve": "vite preview",
     "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "pretty": "prettier --write src/**/*.js src/**/*.jsx"
   },
   "dependencies": {
     "@styled-icons/simple-icons": "^10.41.0",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.0",
     "gh-pages": "^3.2.3",
+    "prettier": "^2.4.1",
     "vite": "^2.5.4"
   }
 }
