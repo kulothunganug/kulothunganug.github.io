@@ -16,17 +16,16 @@ const Body = () => (
   </Container>
 );
 
-const Container = styled.div``;
-
-const Caption = styled.h6`
-  font-size: 15px;
+const Caption = styled.h4`
   margin-top: 20px;
   transition: color 0.25s ease-in;
 
   @media only screen and (max-width: 600px) {
-    font-size: 13px;
+    font-size: 15px;
   }
 `;
+
+const Container = styled.div``;
 
 const H1 = styled.h1`
   font-size: 90px;
