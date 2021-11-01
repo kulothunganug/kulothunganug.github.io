@@ -5,6 +5,7 @@ import ThemeProvider from './contexts/ThemeContext';
 import Home from './pages/home';
 import Blog from './pages/blog';
 import Blogs from './pages/blogs';
+import PageNotFound from './pages/PageNotFound';
 
 const App = () => (
   <ThemeProvider>
@@ -12,6 +13,7 @@ const App = () => (
       <Route path='/' component={Home}></Route>
       <Route path='/blogs' component={Blogs}></Route>
       <Route path='/blog' component={Blog}></Route>
+      <Route component={PageNotFound}></Route>
     </Switch>
   </ThemeProvider>
 );
