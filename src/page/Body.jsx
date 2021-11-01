@@ -22,7 +22,7 @@ const H1 = styled.h1`
   margin: auto;
 
   &:hover {
-    color: dodgerblue;
+    color: ${p => p.theme.primaryColor};
   }
 
   @media only screen and (max-width: 600px) {
