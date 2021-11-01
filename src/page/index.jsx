@@ -3,16 +3,14 @@ import styled from 'styled-components';
 import { BsSun, BsMoon } from 'react-icons/bs';
 
 import { useTheme } from '../contexts/ThemeContext';
-import Header from './Header';
-import Footer from './Footer';
 import Body from './Body';
+import Footer from './Footer';
 
 const Home = () => {
   const { theme, setTheme } = useTheme();
 
   return (
       <Container>
-        <Header />
         <Body />
         <Footer />
         <IconContainer>

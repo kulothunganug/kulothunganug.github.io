@@ -1,27 +1,44 @@
 import React from 'react';
-import styled from 'styled-components';
-
-import Link from '../components/Link';
+import styled, { keyframes } from 'styled-components';
 
 const Body = () => (
   <Container>
+    <H2>
+      Hey there! <Span>👋</Span>,
+    </H2>
+    <H1>I'm Kulothungan.</H1>
     <P>a self-taught developer seeking to learn new things.</P>
-    <Tags>
-      <Tag href='https://www.python.org/'>Python</Tag>
-      <Tag href='https://kivy.org/'>Kivy</Tag>
-      <Tag href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>
-        JavaScript
-      </Tag>
-      <Tag href='https://developer.mozilla.org/en-US/docs/Web/css'>CSS</Tag>
-      <Tag href='https://developer.mozilla.org/en-US/docs/Web/html'>HTML</Tag>
-      <Tag href='https://reactjs.org/'>React</Tag>
-      <Tag href='https://reactnative.dev/'>React Native</Tag>
-      <Tag href='https://firebase.google.com/'>Firebase</Tag>
-    </Tags>
   </Container>
 );
 
 const Container = styled.div``;
+
+const H1 = styled.h1`
+  font-size: 90px;
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  transition: color 0.25s ease-in;
+  display: inline-block;
+  margin: auto;
+
+  &:hover {
+    color: dodgerblue;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 30px;
+  }
+`;
+
+const H2 = styled.h2`
+  font-size: 40px;
+  margin: auto;
+  transition: color 0.25s ease-in;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 30px;
+  }
+`;
 
 const P = styled.p`
   font-size: 20px;
@@ -33,24 +50,23 @@ const P = styled.p`
   }
 `;
 
-const Tag = styled(Link)`
-  font-size: 15px;
-  background-color: crimson;
-  border-radius: 5px;
-  padding: 5px;
-  margin-right: 10px;
-
-  &:hover {
-    text-decoration: underline;
-  }
+const wave = keyframes`
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
 `;
 
-const Tags = styled.div`
-  margin-top: 20px;
-
-  @media only screen and (max-width: 600px) {
-    display: none;
-  }
+const Span = styled.span`
+  animation-name: ${wave};
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
 `;
 
 export default Body;
