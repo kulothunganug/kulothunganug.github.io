@@ -11,8 +11,10 @@ const Home = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div>
       <Container>
+        <Header />
+        <Body />
+        <Footer />
         <IconContainer>
           {theme == 'light' ? (
             <BsMoon
@@ -26,11 +28,7 @@ const Home = () => {
             />
           )}
         </IconContainer>
-        <Header />
-        <Body />
-        <Footer />
       </Container>
-    </div>
   );
 };
 
@@ -54,9 +52,11 @@ const IconContainer = styled.div`
   cursor: pointer;
   position: fixed;
   right: 100px;
+  bottom: 50px;
 
   @media only screen and (max-width: 600px) {
-    right: -10px;
+    right: 0px;
+    bottom: 60px;
   }
 `;
 
