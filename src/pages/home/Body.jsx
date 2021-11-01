@@ -10,17 +10,18 @@ const Body = () => (
     </H2>
     <H1>I'm Kulothungan.</H1>
     <P>a self-taught developer seeking to learn new things.</P>
-    <BlogInfo>
-      Check out my <WLink href='/blogs'>blog</WLink>
-    </BlogInfo>
+    <Caption>
+      Check out my <WLink href='/blogs'>blog</WLink>.
+    </Caption>
   </Container>
 );
 
 const Container = styled.div``;
 
-const BlogInfo = styled.h6`
+const Caption = styled.h6`
   font-size: 15px;
   margin-top: 20px;
+  transition: color 0.25s ease-in;
 
   @media only screen and (max-width: 600px) {
     font-size: 13px;
