@@ -8,7 +8,7 @@ import {
   SiGmail,
 } from 'react-icons/si';
 
-import IconLink from '../components/IconLink';
+import IconLink from '../../components/IconLink';
 
 const ICON_SIZE = 25;
 

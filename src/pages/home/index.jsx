@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { BsSun, BsMoon } from 'react-icons/bs';
 
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../../contexts/ThemeContext';
 import Body from './Body';
 import Footer from './Footer';
 
@@ -10,23 +10,23 @@ const Home = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-      <Container>
-        <Body />
-        <Footer />
-        <IconContainer>
-          {theme == 'light' ? (
-            <BsMoon
-              size={28}
-              onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-            />
-          ) : (
-            <BsSun
-              size={25}
-              onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-            />
-          )}
-        </IconContainer>
-      </Container>
+    <Container>
+      <Body />
+      <Footer />
+      <IconContainer>
+        {theme == 'light' ? (
+          <BsMoon
+            size={28}
+            onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
+          />
+        ) : (
+          <BsSun
+            size={25}
+            onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
+          />
+        )}
+      </IconContainer>
+    </Container>
   );
 };
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
+import { WLink } from '../../components';
+
 const Body = () => (
   <Container>
     <H2>
@@ -8,10 +10,22 @@ const Body = () => (
     </H2>
     <H1>I'm Kulothungan.</H1>
     <P>a self-taught developer seeking to learn new things.</P>
+    <BlogInfo>
+      Check out my <WLink href='/blogs'>blog</WLink>
+    </BlogInfo>
   </Container>
 );
 
 const Container = styled.div``;
+
+const BlogInfo = styled.h6`
+  font-size: 15px;
+  margin-top: 20px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 13px;
+  }
+`;
 
 const H1 = styled.h1`
   font-size: 90px;
