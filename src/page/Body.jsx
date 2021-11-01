@@ -26,6 +26,7 @@ const Container = styled.div``;
 const P = styled.p`
   font-size: 20px;
   margin: auto;
+  transition: color 0.25s ease-in;
 
   @media only screen and (max-width: 600px) {
     font-size: 17px;

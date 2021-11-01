@@ -47,6 +47,7 @@ const Footer = () => (
 
 const Caption = styled.p`
   margin-bottom: 10px;
+  transition: color 0.25s ease-in;
 `;
 
 const Container = styled.div`

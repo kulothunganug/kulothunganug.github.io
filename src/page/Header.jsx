@@ -32,6 +32,7 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   font-size: 40px;
   margin: auto;
+  transition: color 0.25s ease-in;
 
   @media only screen and (max-width: 600px) {
     font-size: 30px;
