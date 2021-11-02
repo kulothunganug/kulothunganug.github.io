@@ -25,8 +25,6 @@ const Home = () => {
 };
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   padding: 100px 0 0 100px;
   color: ${p => p.theme.textColor};
@@ -39,8 +37,6 @@ const Container = styled.div`
 `;
 
 const IconContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
   margin-right: 40px;
   cursor: pointer;
   position: fixed;
