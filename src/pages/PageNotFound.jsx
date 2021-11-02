@@ -28,7 +28,6 @@ const Container = styled.div`
 const H1 = styled.h1`
   font-size: 100px;
   font-family: 'Arvo', serif;
-  margin: 0;
 
   @media only screen and (max-width: 600px) {
     font-size: 90px;

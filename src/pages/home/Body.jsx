@@ -33,7 +33,6 @@ const H1 = styled.h1`
   font-weight: bold;
   transition: color 0.25s ease-in;
   display: inline-block;
-  margin: auto;
 
   &:hover {
     color: ${p => p.theme.primaryColor};
@@ -46,7 +45,6 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
   font-size: 40px;
-  margin: auto;
   transition: color 0.25s ease-in;
 
   @media only screen and (max-width: 600px) {
@@ -56,7 +54,6 @@ const H2 = styled.h2`
 
 const P = styled.p`
   font-size: 20px;
-  margin: auto;
   transition: color 0.25s ease-in;
 
   @media only screen and (max-width: 600px) {
