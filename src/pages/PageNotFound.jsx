@@ -1,15 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {WLink} from '../components';
+import { WLink } from '../components';
 
 const PageNotFound = () => (
   <Container>
     <H1>404!</H1>
     <H2>This is not the web page you are looking for.</H2>
-    <H2>Please goto <WLink href='/'>home</WLink> or <WLink href='/blogs'>blog</WLink> page</H2>
+    <H2>
+      Please goto <WLink href='/'>home</WLink> or{' '}
+      <WLink href='/blogs'>blog</WLink> page
+    </H2>
   </Container>
-)
+);
 
 const Container = styled.div`
   display: flex;
@@ -33,10 +36,9 @@ const H1 = styled.h1`
 `;
 
 const H2 = styled.h2`
-
   @media only screen and (max-width: 600px) {
     font-size: 20px;
   }
 `;
 
-export default PageNotFound
+export default PageNotFound;
