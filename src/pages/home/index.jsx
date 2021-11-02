@@ -7,7 +7,7 @@ import Body from './Body';
 import Footer from './Footer';
 
 const Home = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <Container>
@@ -15,15 +15,9 @@ const Home = () => {
       <Footer />
       <IconContainer>
         {theme == 'light' ? (
-          <BsMoon
-            size={28}
-            onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-          />
+          <BsMoon size={28} onClick={toggleTheme} />
         ) : (
-          <BsSun
-            size={25}
-            onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-          />
+          <BsSun size={28} onClick={toggleTheme} />
         )}
       </IconContainer>
     </Container>
