@@ -12,7 +12,7 @@ const App = () => (
     <Switch>
       <Route path='/' component={Home}></Route>
       <Route path='/blogs' component={Blogs}></Route>
-      <Route path='/blog' component={Blog}></Route>
+      <Route path='/blog/:id' component={Blog}></Route>
       <Route component={PageNotFound}></Route>
     </Switch>
   </ThemeProvider>
