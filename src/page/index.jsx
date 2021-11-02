@@ -7,26 +7,20 @@ import Body from './Body';
 import Footer from './Footer';
 
 const Home = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
-      <Container>
-        <Body />
-        <Footer />
-        <IconContainer>
-          {theme == 'light' ? (
-            <BsMoon
-              size={28}
-              onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-            />
-          ) : (
-            <BsSun
-              size={25}
-              onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-            />
-          )}
-        </IconContainer>
-      </Container>
+    <Container>
+      <Body />
+      <Footer />
+      <IconContainer>
+        {theme == 'light' ? (
+          <BsMoon size={28} onClick={toggleTheme} />
+        ) : (
+          <BsSun size={25} onClick={toggleTheme} />
+        )}
+      </IconContainer>
+    </Container>
   );
 };
 
