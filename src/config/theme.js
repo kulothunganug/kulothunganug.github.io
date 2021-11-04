@@ -1,5 +1,5 @@
 export const lightTheme = {
-  backgroundColor: '#f5f5f5',
+  backgroundColor: '#ececec',
   textColor: '#000',
   oppTextColor: '#fff',
   primaryColor: '#1e90ff',
@@ -7,7 +7,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   ...lightTheme,
-  backgroundColor: '#000',
+  backgroundColor: '#111',
   textColor: '#fff',
   oppTextColor: '#000',
 };
