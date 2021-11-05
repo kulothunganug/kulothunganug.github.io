@@ -6,6 +6,8 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import { useTitle } from '../../hooks';
+import { Spinner } from '../../components';
+import { getBlog } from '../../api';
 
 const Components = {
   code({ node, inline, className, children, ...props }) {
@@ -30,19 +32,19 @@ const Components = {
 const Blog = ({ params }) => {
   const [location, setLocation] = useLocation();
   const [blog, setBlog] = useState({});
-  useTitle('Blog ' + blog.title);
+  useTitle('Blog - ' + blog.title);
 
-  const fetchData = async () => {
-    let res = await fetch('http://localhost:8000/blog/' + params.id);
-    res = await res.json();
-    if (res['blog'] == null) {
-      setLocation('/blogs');
+  const fetchBlog = async () => {
+    let blog_ = await getBlog(params.id);
+    if (blog_ == null) {
+      setLocation('/404');
+      return;
     }
-    setBlog(res['blog']);
+    setBlog(blog_);
   };
 
   useEffect(() => {
-    fetchData();
+    fetchBlog();
   }, []);
 
   if (isNaN(Number(params.id))) {
@@ -51,18 +53,20 @@ const Blog = ({ params }) => {
 
   return (
     <Container>
-      <Markdown
-        components={Components}
-        children={blog.content}
-        linkTarget='_blank'
-      />
+      {!blog.content ? (
+        <Spinner />
+      ) : (
+        <Markdown
+          components={Components}
+          children={blog.content}
+          linkTarget='_blank'
+        />
+      )}
     </Container>
   );
 };
 
 const Container = styled.div`
-  color: ${p => p.theme.textColor};
-  background-color: ${p => p.theme.backgroundColor};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,6 +84,10 @@ const Markdown = styled(ReactMarkdown)`
     font-size: 18px;
   }
 
+  h1 {
+    font-family: 'Arvo', serif;
+  }
+
   a {
     color: ${p => p.theme.primaryColor};
     text-decoration: none;
@@ -87,6 +95,11 @@ const Markdown = styled(ReactMarkdown)`
 
   a:hover {
     text-decoration: underline;
+  }
+
+  code {
+    font-size: 16px;
+    background-color: ${p => p.theme.surfaceColor};
   }
 
   ul {
@@ -97,6 +110,12 @@ const Markdown = styled(ReactMarkdown)`
     color: #666;
     padding-left: 1.5em;
     border-left: 4px solid ${p => p.theme.primaryColor};
+  }
+
+  @media only screen and (max-width: 600px) {
+    code {
+      font-size: 14px;
+    }
   }
 `;
 

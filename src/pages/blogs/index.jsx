@@ -3,19 +3,18 @@ import styled from 'styled-components';
 
 import { BlogCard } from '../../components';
 import { useTitle } from '../../hooks';
+import { getBlogs } from '../../api';
 
 const Blogs = () => {
-  useTitle('Kulothungan - Blogs');
+  useTitle('Kulothungan - Blog');
   const [blogs, setBlogs] = useState([]);
 
-  const fetchData = async () => {
-    let res = await fetch('http://localhost:8000/blogs');
-    res = await res.json();
-    setBlogs(res['blogs']);
+  const fetchBlogs = async () => {
+    setBlogs(await getBlogs());
   };
 
   useEffect(() => {
-    fetchData();
+    fetchBlogs();
   }, []);
 
   return (
@@ -42,8 +41,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: ${p => p.theme.textColor};
-  background-color: ${p => p.theme.backgroundColor};
   padding: 50px 250px 0 250px;
 
   @media only screen and (max-width: 600px) {
