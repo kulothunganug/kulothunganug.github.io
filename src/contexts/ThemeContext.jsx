@@ -27,7 +27,10 @@ const ThemeProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    setMetaThemeColor(getThemeObj().backgroundColor);
+    let themeObj = getThemeObj();
+    setMetaThemeColor(themeObj.backgroundColor);
+    document.body.style.background = themeObj.backgroundColor;
+    document.body.style.color = themeObj.textColor;
   }, [theme]);
 
   const value = { theme, toggleTheme };
