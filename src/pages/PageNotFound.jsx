@@ -9,7 +9,7 @@ const PageNotFound = () => (
     <H2>This is not the web page you are looking for.</H2>
     <H2>
       Please goto <WLink href='/'>home</WLink> or{' '}
-      <WLink href='/blogs'>blog</WLink> page
+      <WLink href='/blog'>blog</WLink> page
     </H2>
   </Container>
 );

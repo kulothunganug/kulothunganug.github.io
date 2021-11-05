@@ -1,13 +1,13 @@
 const URL = 'http://localhost:8000';
 
-const getBlogs = async () => {
-  let res = await fetchAPI(URL + '/blogs');
-  return res['blogs'];
+const getPosts = async () => {
+  let res = await fetchAPI(URL + '/posts');
+  return res['posts'];
 };
 
-const getBlog = async id => {
-  let res = await fetchAPI(URL + '/blog/' + id);
-  return res['blog'];
+const getPost = async id => {
+  let res = await fetchAPI(URL + '/post/' + id);
+  return res['post'];
 };
 
 const fetchAPI = async url => {
@@ -15,4 +15,4 @@ const fetchAPI = async url => {
   return await res.json();
 };
 
-export { getBlog, getBlogs };
+export { getPost, getPosts };

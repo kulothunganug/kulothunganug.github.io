@@ -5,7 +5,7 @@ import { WLink } from '.';
 
 const BlogCard = ({ title, summary, id }) => (
   <Container>
-    <Title href={'/blog/' + id}>{title}</Title>
+    <Title href={'/post/' + id}>{title}</Title>
     <Summary>{summary}</Summary>
   </Container>
 );

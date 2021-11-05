@@ -11,7 +11,7 @@ const Body = () => (
     <H1>I'm Kulothungan.</H1>
     <P>a self-taught developer seeking to learn new things.</P>
     <Caption>
-      Check out my <WLink href='/blogs'>blog</WLink>.
+      Check out my <WLink href='/blog'>blog</WLink>.
     </Caption>
   </Container>
 );
