@@ -11,4 +11,6 @@ body {
   font-family: 'Dosis', sans-serif;
   -webkit-tap-highlight-color: transparent;
   transition: all 0.25s ease-in;
+  background-color: #111;
+  color: #fff;
 }
