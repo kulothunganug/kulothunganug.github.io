@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { BlogCard } from '../../components';
+import { BlogCard, Spinner } from '../../components';
 import { useTitle } from '../../hooks';
 import { getBlogs } from '../../api';
 
@@ -20,17 +20,21 @@ const Blogs = () => {
   return (
     <Container>
       <H1>Blogs!</H1>
-      <BlogsContainer>
-        {blogs.map(item => (
-          <BlogCard
-            id={item.id}
-            key={item.id}
-            title={item.title}
-            timestamp='10 hrs ago'
-            summary={item.summary}
-          />
-        ))}
-      </BlogsContainer>
+      {!blogs.length ? (
+        <Spinner />
+      ) : (
+        <BlogsContainer>
+          {blogs.map(item => (
+            <BlogCard
+              id={item.id}
+              key={item.id}
+              title={item.title}
+              timestamp='10 hrs ago'
+              summary={item.summary}
+            />
+          ))}
+        </BlogsContainer>
+      )}
     </Container>
   );
 };
@@ -44,7 +48,7 @@ const Container = styled.div`
   padding: 50px 250px 0 250px;
 
   @media only screen and (max-width: 600px) {
-    padding: 50px 10px 0 10px;
+    padding: 20px 10px 0 10px;
   }
 `;
 
