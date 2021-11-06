@@ -25,7 +25,11 @@ const Home = () => {
 };
 
 const Container = styled.div`
+  height: 100vh;
   padding: 100px 0 0 100px;
+  color: ${p => p.theme.textColor};
+  background-color: ${p => p.theme.backgroundColor};
+  transition: all 0.25s ease-in;
 
   @media only screen and (max-width: 600px) {
     padding: 50px 0 0 30px;
