@@ -13,7 +13,7 @@ export const useTheme = () => {
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useStorage('theme', 'dark');
 
-  const getThemeData = () => {
+  const getThemeObj = () => {
     return theme == 'light' ? lightTheme : darkTheme;
   };
 
@@ -27,7 +27,8 @@ const ThemeProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    setMetaThemeColor(getThemeData().backgroundColor);
+    let themeObj = getThemeObj();
+    setMetaThemeColor(themeObj.backgroundColor);
   }, [theme]);
 
   const value = { theme, toggleTheme };
