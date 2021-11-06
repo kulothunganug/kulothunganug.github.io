@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Redirect, useLocation } from 'wouter';
+import { useLocation } from 'wouter';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -44,12 +44,13 @@ const Post = ({ params }) => {
   };
 
   useEffect(() => {
+    if (isNaN(Number(params.id))) {
+      setLocation('/404');
+      return;
+    }
+
     fetchPost();
   }, []);
-
-  if (isNaN(Number(params.id))) {
-    return <Redirect to='/404' />;
-  }
 
   return (
     <Container>
