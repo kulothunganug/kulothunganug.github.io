@@ -5,9 +5,9 @@ import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import { useTitle } from '../../hooks';
-import { Spinner } from '../../components';
-import { getPost } from '../../api';
+import { useTitle } from '~/hooks';
+import { Spinner } from '~/components';
+import { getPost } from '~/api';
 
 const Components = {
   code({ node, inline, className, children, ...props }) {

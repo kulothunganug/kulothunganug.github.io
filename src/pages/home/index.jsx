@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { BsSun, BsMoon } from 'react-icons/bs';
 
-import { useTheme } from '../../contexts/ThemeContext';
-import { useTitle } from '../../hooks';
+import { useTheme } from '~/contexts/ThemeContext';
+import { useTitle } from '~/hooks';
 import Body from './Body';
 import Footer from './Footer';
 

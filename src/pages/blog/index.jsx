@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { BlogCard, Spinner } from '../../components';
-import { useTitle } from '../../hooks';
-import { getPosts } from '../../api';
+import { BlogCard, Spinner } from '~/components';
+import { useTitle } from '~/hooks';
+import { getPosts } from '~/api';
 
 const Blog = () => {
   useTitle('Kulothungan - Blog');

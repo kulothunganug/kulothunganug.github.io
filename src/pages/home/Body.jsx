@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { WLink } from '../../components';
+import { WLink } from '~/components';
 
 const Body = () => (
   <Container>

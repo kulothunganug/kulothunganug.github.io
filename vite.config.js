@@ -8,6 +8,15 @@ export default defineConfig({
       babel: {
         compact: false,
         minified: true,
+        plugins: [
+          [
+            'babel-plugin-root-import',
+            {
+              rootPathSuffix: './src',
+              rootPathPrefix: '~/',
+            },
+          ],
+        ],
       },
     }),
   ],
