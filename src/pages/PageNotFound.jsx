@@ -1,18 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { WLink } from '../components';
+import { WLink } from '~/components';
+import { useTitle } from '~/hooks';
 
-const PageNotFound = () => (
-  <Container>
-    <H1>404!</H1>
-    <H2>This is not the web page you are looking for.</H2>
-    <H2>
-      Please goto <WLink href='/'>home</WLink> or{' '}
-      <WLink href='/blog'>blog</WLink> page
-    </H2>
-  </Container>
-);
+const PageNotFound = () => {
+  useTitle('Page not found - 404');
+
+  return (
+    <Container>
+      <H1>404!</H1>
+      <H2>This is not the web page you are looking for.</H2>
+      <H2>
+        Please goto <WLink href='/'>home</WLink> or{' '}
+        <WLink href='/blog'>blog</WLink> page
+      </H2>
+    </Container>
+  );
+};
 
 const Container = styled.div`
   display: flex;
@@ -21,8 +26,6 @@ const Container = styled.div`
   align-items: center;
   height: 100vh;
   text-align: center;
-  background-color: ${p => p.theme.backgroundColor};
-  color: ${p => p.theme.textColor};
 `;
 
 const H1 = styled.h1`
