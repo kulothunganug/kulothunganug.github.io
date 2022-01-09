@@ -1,24 +1,33 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import { Typed } from '../components';
 
 const Body = () => (
   <Container>
     <H2>
       Hey there! <Span>👋</Span>,
     </H2>
-    <H1>I'm Kulothungan.</H1>
+    <H1
+      strings={[
+        "I'm Kulothungan.",
+        "I'm a student.",
+        "I'm a python programmer.",
+        "I'm a Javascript developer.",
+      ]}
+    />
     <P>a self-taught developer seeking to learn new things.</P>
   </Container>
 );
 
 const Container = styled.div``;
 
-const H1 = styled.h1`
+const H1 = styled(Typed)`
   font-size: 90px;
   font-family: 'Arvo', serif;
   font-weight: bold;
   transition: color 0.25s ease-in;
   display: inline-block;
+  overflow: auto;
 
   &:hover {
     color: ${p => p.theme.primaryColor};
