@@ -11,11 +11,9 @@ const Body = () => (
       strings={[
         "I'm Kulothungan.",
         "I'm a student.",
-        "I'm a python programmer.",
-        "I'm a Javascript developer.",
+        "I'm a self-taught developer.",
       ]}
     />
-    <P>a self-taught developer seeking to learn new things.</P>
   </Container>
 );
 
@@ -44,15 +42,6 @@ const H2 = styled.h2`
 
   @media only screen and (max-width: 600px) {
     font-size: 30px;
-  }
-`;
-
-const P = styled.p`
-  font-size: 20px;
-  transition: color 0.25s ease-in;
-
-  @media only screen and (max-width: 600px) {
-    font-size: 17px;
   }
 `;
 
