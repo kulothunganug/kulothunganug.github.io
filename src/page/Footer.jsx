@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   SiInstagram,
-  SiDiscord,
   SiYoutube,
   SiGithub,
   SiGmail,
@@ -17,19 +16,13 @@ const Footer = () => (
     <Caption>Find me on:</Caption>
     <Links>
       <SocialLink
-        href='https://discordapp.com/users/770868890737704979'
-        hoverColor='#5865F2'
-        IconComponent={<SiDiscord size={ICON_SIZE} />}
-        aria-label='Discord'
-      />
-      <SocialLink
-        href='https://github.com/Kulothungan16'
+        href='https://github.com/kulothunganug'
         hoverColor='#181717'
         IconComponent={<SiGithub size={ICON_SIZE} />}
         aria-label='Github'
       />
       <SocialLink
-        href='https://www.instagram.com/kuloth.__.ungan'
+        href='https://www.instagram.com/kulothunganug'
         hoverColor='#E4405F'
         IconComponent={<SiInstagram size={ICON_SIZE} />}
         aria-label='Instagram'
@@ -41,7 +34,7 @@ const Footer = () => (
         aria-label='Mail'
       />
       <SocialLink
-        href='https://www.youtube.com/channel/UCPFVA4ruEe3QOtTfxEGpqrg'
+        href='https://www.youtube.com/@kulothunganug'
         hoverColor='#FF0000'
         IconComponent={<SiYoutube size={ICON_SIZE} />}
         aria-label='Youtube'

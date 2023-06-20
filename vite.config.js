@@ -11,5 +11,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: 'https://kulothungan16.github.io/',
+  base: 'https://kulothunganug.github.io/',
 });
