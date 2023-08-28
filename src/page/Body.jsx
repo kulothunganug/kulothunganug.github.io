@@ -12,6 +12,7 @@ const Body = () => (
         "I'm Kulothungan.",
         "I'm a student.",
         "I'm a self-taught developer.",
+        "I'm a speed cuber.",
       ]}
     />
   </Container>
