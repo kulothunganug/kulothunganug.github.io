@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SiInstagram, SiYoutube, SiGithub, SiGmail } from 'react-icons/si';
+import { SiLinkedin, SiGithub, SiGmail } from 'react-icons/si';
 
 import IconLink from '../components/IconLink';
 
@@ -17,22 +17,16 @@ const Footer = () => (
         aria-label='Github'
       />
       <SocialLink
-        href='https://www.instagram.com/kulothunganug'
-        hoverColor='#E4405F'
-        IconComponent={<SiInstagram size={ICON_SIZE} />}
-        aria-label='Instagram'
-      />
-      <SocialLink
         href='mailto:kulothunganug@gmail.com'
         hoverColor='#EA4335'
         IconComponent={<SiGmail size={ICON_SIZE} />}
         aria-label='Mail'
       />
       <SocialLink
-        href='https://www.youtube.com/@kulothunganug'
-        hoverColor='#FF0000'
-        IconComponent={<SiYoutube size={ICON_SIZE} />}
-        aria-label='Youtube'
+        href='https://www.linkedin.com/in/kulothunganug'
+        hoverColor='#0A66C2'
+        IconComponent={<SiLinkedin size={ICON_SIZE} />}
+        aria-label='LinkedIn'
       />
     </Links>
   </Container>
