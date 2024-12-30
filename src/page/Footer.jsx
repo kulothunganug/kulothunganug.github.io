@@ -12,19 +12,19 @@ const Footer = () => (
     <Links>
       <SocialLink
         href='https://github.com/kulothunganug'
-        hoverColor='#181717'
+        $hoverColor='#181717'
         IconComponent={<SiGithub size={ICON_SIZE} />}
         aria-label='Github'
       />
       <SocialLink
         href='mailto:kulothunganug@gmail.com'
-        hoverColor='#EA4335'
+        $hoverColor='#EA4335'
         IconComponent={<SiGmail size={ICON_SIZE} />}
         aria-label='Mail'
       />
       <SocialLink
         href='https://www.linkedin.com/in/kulothunganug'
-        hoverColor='#0A66C2'
+        $hoverColor='#0A66C2'
         IconComponent={<SiLinkedin size={ICON_SIZE} />}
         aria-label='LinkedIn'
       />

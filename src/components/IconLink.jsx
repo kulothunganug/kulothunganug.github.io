@@ -18,7 +18,7 @@ const Container = styled(Link)`
   color: ${p => p.theme.textColor};
 
   &:hover {
-    background-color: ${p => p.hoverColor};
+    background-color: ${p => p.$hoverColor};
     color: white;
     transform: scale(1.1);
   }
