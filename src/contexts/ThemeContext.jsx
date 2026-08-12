@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext, createContext } from 'react';
+import React, { useEffect, useContext, createContext } from 'react';
 import { ThemeProvider as SCThemeProvider } from 'styled-components';
 
-import { lightTheme, darkTheme } from '../config/theme';
-import { useStorage } from '../hooks';
+import { darkTheme } from '../config/theme';
 
 const ThemeContext = createContext();
 
@@ -11,33 +10,22 @@ export const useTheme = () => {
 };
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useStorage('theme', 'dark');
-
-  const getThemeObj = () => {
-    return theme == 'light' ? lightTheme : darkTheme;
-  };
-
-  const toggleTheme = () => {
-    setTheme(t => (t == 'dark' ? 'light' : 'dark'));
-  };
-
   const setMetaThemeColor = color => {
     const meta = document.querySelector('meta[name="theme-color"]');
-    meta.setAttribute('content', color);
+    if (meta) {
+      meta.setAttribute('content', color);
+    }
   };
 
   useEffect(() => {
-    let themeObj = getThemeObj();
-    setMetaThemeColor(themeObj.backgroundColor);
-  }, [theme]);
+    setMetaThemeColor(darkTheme.backgroundColor);
+  }, []);
 
-  const value = { theme, toggleTheme };
+  const value = { theme: 'dark', toggleTheme: () => {} };
 
   return (
     <ThemeContext.Provider value={value}>
-      <SCThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
-        {children}
-      </SCThemeProvider>
+      <SCThemeProvider theme={darkTheme}>{children}</SCThemeProvider>
     </ThemeContext.Provider>
   );
 };
