@@ -33,7 +33,7 @@ const Footer = () => (
       </Links>
     </SocialContainer>
     <ResumeButton
-      href='https://rxresu.me/kulothunganug/resume'
+      href='https://rx.cv/kulothunganug'
       target='_blank'
       rel='noopener noreferrer'
     >
